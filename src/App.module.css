@@ -1,0 +1,17 @@
+.appContainer {
+    display: flex;
+}
+
+.screensContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+.leftCol {
+    flex: 1;
+}
+
+.rightCol {
+    flex: 1;
+}
