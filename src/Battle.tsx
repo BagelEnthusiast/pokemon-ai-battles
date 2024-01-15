@@ -2,12 +2,16 @@ import { useEffect, useState } from "react";
 import { BotScreen } from "./BotScreen";
 import { PlayerScreen } from "./PlayerScreen";
 import { getPokemonAsync } from "./apiCalls"
-import { Pokemon } from './types'
-import styles from "./App.module.css";
+import { Pokemon, PokemonData } from './types'
+import styles from "./Battle.module.css";
 
-function App() {
+interface Props {
+  teamInfo: Pokemon[]
+}
 
-  const [currentPokemon, setCurrentPokemon] = useState<Pokemon | undefined>()
+function Battle(props: Props) {
+
+  const [currentPokemon, setCurrentPokemon] = useState<PokemonData | undefined>()
 
   useEffect(() => {
     //TODO: will need an api call for each pokemon on both teams
@@ -33,4 +37,4 @@ function App() {
   );
 }
 
-export default App;
+export default Battle;
